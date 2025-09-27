@@ -15,3 +15,10 @@ interface Movie {
   backdrop_path?: string;
   vote_average?: number;
 }
+
+interface TrendingMovie {
+  movie_id: number;
+  title: string;
+  poster_url?: string;
+  index: number;
+}

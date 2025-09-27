@@ -2,6 +2,7 @@ import MovieCard from "@/components/MovieCard";
 import SearchBar from "@/components/SearchBar";
 import { images } from "@/constants/images";
 import { fetchMovies } from "@/services/api";
+import { updateSearchCount } from "@/services/appwrite";
 import useFetch from "@/services/useFetch";
 import React, { useEffect } from "react";
 import {
@@ -29,6 +30,10 @@ const Search = () => {
       const func = async () => {
         if (searchQuery.trim()) {
           await loadMovies();
+
+          if (movies?.length > 0 && movies?.[0]) {
+            await updateSearchCount(searchQuery, movies?.[0]); // Update search count in Appwrite
+          }
         } else {
           reset();
         }
@@ -99,14 +104,13 @@ const Search = () => {
             </>
           }
           ListEmptyComponent={
-            !moviesLoading &&
-            !moviesError && (
+            !moviesLoading && !moviesError ? (
               <Text className="text-gray-500 text-center my-5">
                 {searchQuery.trim()
                   ? "No results found"
                   : "Start typing to search for movies"}
               </Text>
-            )
+            ) : null
           }
         />
       </ImageBackground>

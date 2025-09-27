@@ -16,7 +16,7 @@ const MovieCard = ({
           source={{
             uri: poster_path
               ? `https://image.tmdb.org/t/p/w500${poster_path}`
-              : "https://via.placeholder.com/500x750?text=No+Image",
+              : "https://blocks.astratic.com/img/general-img-landscape.png",
           }}
           className="w-full h-52 rounded-lg"
           resizeMode="cover"
