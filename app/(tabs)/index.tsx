@@ -55,15 +55,7 @@ const Home = () => {
             <FlatList
               data={movies}
               keyExtractor={(item) => item.id.toString()}
-              renderItem={({ item }) => (
-                <MovieCard
-                  id={item.id}
-                  poster_path={item.poster_path}
-                  title={item.title}
-                  vote_average={item.vote_average}
-                  release_date={item.release_date}
-                />
-              )}
+              renderItem={({ item }) => <MovieCard {...item} />}
               numColumns={3}
               columnWrapperStyle={{
                 justifyContent: "flex-start",
