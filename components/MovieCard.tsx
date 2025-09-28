@@ -1,3 +1,4 @@
+import { images } from "@/constants/images";
 import { Link } from "expo-router";
 import React from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
@@ -27,8 +28,9 @@ const MovieCard = ({
         </Text>
 
         <View className="flex-row justify-start items-center gap-x-1">
+          <Image source={images.star} className="size-3" />
           <Text className="text-xs text-white font-bold uppercase">
-            *{Math.round((vote_average ?? 0) / 10)}%
+            {Math.round((vote_average || 0) * 10) / 10}
           </Text>
         </View>
 

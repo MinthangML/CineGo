@@ -16,6 +16,25 @@ interface Movie {
   vote_average?: number;
 }
 
+interface MovieDetails {
+  id: number;
+  title: string;
+  overview: string;
+  release_date: string;
+  poster_path?: string;
+  runtime?: number;
+  vote_average?: number;
+  vote_count?: number;
+  genres?: { id: number; name: string }[];
+  budget?: number;
+  revenue?: number;
+  homepage?: string;
+  status?: string;
+  tagline?: string;
+  production_companies?: { id: number; name: string }[];
+  // Add other fields as needed
+}
+
 interface TrendingMovie {
   movie_id: number;
   title: string;
