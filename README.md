@@ -1,50 +1,92 @@
-# Welcome to your Expo app 👋
+# 🎬 CineGo
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+CineGo is a simple and user-friendly movie app developed for **educational purposes**. It demonstrates how to build a modern mobile application with clean architecture, real-time data fetching, and an intuitive UI for exploring movies.
 
-## Get started
+---
 
-1. Install dependencies
+## 🚀 Features
+
+* 📖 Browse latest, popular, and trending movies
+* 🔍 Search for movies by title
+* 🎞️ View detailed movie information (overview, release date, rating, etc.)
+* 🌙 Light and dark mode support (if implemented)
+* 🎨 Simple and responsive UI design
+
+---
+
+## 🛠️ Tech Stack
+
+* **Frontend:** React Native (Expo) / Kotlin (Jetpack Compose) *(adjust to your actual stack)*
+* **Backend / API:** TMDb API *(or any other movie API you used)*
+* **State Management:** Context API / Redux / ViewModel (depending on your stack)
+* **Database:** Firebase / Local storage *(if used)*
+
+---
+
+## 📂 Project Structure
+
+```
+CineGo/
+│-- src/
+│   │-- components/    # Reusable UI components
+│   │-- screens/       # Main screens (Home, Search, Details)
+│   │-- services/      # API calls and network logic
+│   │-- utils/         # Helper functions
+│-- assets/            # Images, fonts, icons
+│-- App.js / Main.kt   # App entry point
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/cinego.git
+   ```
+
+2. Navigate into the project folder:
+
+   ```bash
+   cd cinego
+   ```
+
+3. Install dependencies:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+   or
+
+   ```bash
+   yarn install
+   ```
+
+4. Run the project:
 
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+   *(or use Android Studio / Xcode if you’re running a native build)*
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📌 Disclaimer
 
-## Get a fresh project
+CineGo is developed **only for educational purposes**.
+This app is **not intended for commercial use** and may use third-party APIs (such as TMDb). Please respect their terms of service if you reuse the code.
 
-When you're ready, run:
+---
 
-```bash
-npm run reset-project
-```
+## 🤝 Contributing
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Contributions are welcome! Feel free to fork the repo and submit a pull request.
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## 📜 License
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+This project is licensed under the **MIT License** – you are free to use, modify, and distribute it for learning purposes.
